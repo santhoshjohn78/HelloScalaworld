@@ -1,12 +1,16 @@
 object Timer {
 
+  def getNamePrefix(sex: String): String ={
+    if ("f".equalsIgnoreCase(sex) || "female".equalsIgnoreCase(sex))
+      "Ms"
+    else
+      "Mr"
+  }
+
   def callTimer(sex: String): Unit ={
     var name: String = "sadsd"
-    var greeting: String = s"Hello $name";
-    if (sex=="F")
-      greeting = s"Hello Ms $name"
-    else
-      greeting = s"Hello Mr $name"
+    val prefix = getNamePrefix(sex)
+    var greeting: String = s"Hello $prefix $name";
 
     println(greeting)
 
