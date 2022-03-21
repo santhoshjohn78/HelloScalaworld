@@ -1,0 +1,12 @@
+object HelloClosure {
+
+  def main(args: Array[String]):Unit  = {
+
+    var factor = 2;
+
+    var mul = (i:Int) => i * factor;
+
+    println(s"multiplier ="+mul(3));
+  }
+
+}
