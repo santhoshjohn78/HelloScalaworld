@@ -1,0 +1,31 @@
+object MatchExample {
+
+  def main(args: Array[String]):Unit = {
+    var age = 10
+
+    age match{
+      case 12 => println("twelve")
+      case 10 => println("ten")
+      case 8 => println("eight")
+      case _ => println(age)
+    }
+
+    var sex ="T"
+
+    sex match{
+      case "F" => println("Female")
+      case "M" => println("Male")
+      case _ => println("Undefined")
+    }
+    sex = "F"
+
+    var sResult = sex match{
+      case "F" => "Female"
+      case "M" => "Male"
+      case _ => "Undefined"
+    }
+
+    println(sResult)
+  }
+
+}
